@@ -17,6 +17,9 @@
     </modules>
 
     <packaging>pom</packaging>
+    <properties>
+        <com.songsir.rpc.version>1.0-SNAPSHOT</com.songsir.rpc.version>
+    </properties>
 
     <parent>
         <groupId>com.songsir.rpc</groupId>
@@ -24,5 +27,39 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.songsir.rpc</groupId>
+                <artifactId>songsir-rpc-bean</artifactId>
+                <version>${com.songsir.rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.songsir.rpc</groupId>
+                <artifactId>songsir-rpc-common</artifactId>
+                <version>${com.songsir.rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.songsir.rpc</groupId>
+                <artifactId>songsir-rpc-provider-service</artifactId>
+                <version>${com.songsir.rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.songsir.rpc</groupId>
+                <artifactId>songsir-rpc-provider-dao</artifactId>
+                <version>${com.songsir.rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.songsir.rpc</groupId>
+                <artifactId>songsir-rpc-consumer-service</artifactId>
+                <version>${com.songsir.rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.songsir.rpc</groupId>
+                <artifactId>songsir-rpc-consumer-dao</artifactId>
+                <version>${com.songsir.rpc.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
