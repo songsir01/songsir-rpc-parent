@@ -7,8 +7,22 @@
     <groupId>com.songsir.rpc</groupId>
     <artifactId>songsir-rpc-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>songsir-rpc-common</module>
+        <module>songsir-rpc-bean</module>
+        <module>songsir-rpc-provider-service</module>
+        <module>songsir-rpc-provider-dao</module>
+        <module>songsir-rpc-consumer-service</module>
+        <module>songsir-rpc-consumer-dao</module>
+    </modules>
 
     <packaging>pom</packaging>
+
+    <parent>
+        <groupId>com.songsir.rpc</groupId>
+        <artifactId>songsir-rpc-dependencies</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
 
 </project>
