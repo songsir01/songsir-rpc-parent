@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.songsir.rpc.provider.dao.TestMapper">
+
+    <select id="getUserListByUid" parameterType="int" resultType="com.songsir.rpc.bean.User">
+        select * from user where uid = #{uid}
+    </select>
+
+</mapper>

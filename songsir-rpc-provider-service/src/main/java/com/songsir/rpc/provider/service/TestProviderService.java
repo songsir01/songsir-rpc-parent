@@ -1,5 +1,9 @@
 package com.songsir.rpc.provider.service;
 
+import com.songsir.rpc.bean.User;
+
+import java.util.List;
+
 /**
  * @PackageName com.songsir.rpc.provider.service
  * @ProjectName songsir-rpc-parent
@@ -19,5 +23,15 @@ public interface TestProviderService {
      * @Since JDK 1.8
      */
     String getHelloWorld(String msg);
+
+    /**
+     * @MethodName getUserByUid
+     * @Description 测试查询
+     * @Author SongYapeng
+     * @Date 2019/12/26 15:58
+     * @param user
+     * @Since JDK 1.8
+     */
+    List<User> getUserByUid(User user);
 
 }

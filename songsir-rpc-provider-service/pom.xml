@@ -11,5 +11,11 @@
 
     <artifactId>songsir-rpc-provider-service</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.songsir.rpc</groupId>
+            <artifactId>songsir-rpc-bean</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
