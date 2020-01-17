@@ -34,4 +34,14 @@ public interface TestProviderService {
      */
     List<User> getUserByUid(User user);
 
+    /**
+     * @MethodName testUseHttpOrRpc
+     * @Description 该接口测试http调用和rpc调用
+     * @Author SongYapeng
+     * @Date 2020/1/17 10:20
+     * @param
+     * @Since JDK 1.8
+     */
+    String testUseHttpOrRpc();
+
 }
