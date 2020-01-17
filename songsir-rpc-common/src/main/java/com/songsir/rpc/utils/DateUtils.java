@@ -732,8 +732,8 @@ public class DateUtils {
             between = (endTime.getTime() - startTime.getTime()) / 1000L;
         } catch (ParseException e) {
             e.printStackTrace();
+        }
         return between;
     }
-
 
 }
