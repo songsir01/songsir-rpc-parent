@@ -6,29 +6,13 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * 日期处理工具类.
- * <p>
- * 创建日期：2010-07-01<br>
- * 创建人：Xiyt<br>
- * 修改日期：<br>
- * 修改人：<br>
- * 修改内容：<br>
- *
- * @author Xiyt
- * @version 1.0
- */
 public class DateUtils {
 
     /**
      * 静态常量
      */
     public static final String DATE_PATTON_1 = "yyyy-MM-dd";
-    public static final String DATE_PATTON_2 = "yyyy/MM/dd";
-    public static final String DATE_PATTON_3 = "yyyyMMdd";
     public static final String DATE_TIME_PATTON_1 = "yyyy-MM-dd HH:mm:ss";
-    public static final String DATE_TIME_PATTON_2 = "yyyy/MM/dd HH:mm:ss";
-    public static final String DATE_TIME_PATTON_3 = "yyyyMMddHHmmss";
 
     public static final int C_ONE_SECOND = 1000;
     public static final int C_ONE_MINUTE = 60 * C_ONE_SECOND;
@@ -77,7 +61,7 @@ public class DateUtils {
             return null;
         }
 
-        if (format == null || format.equals("")) {
+        if (format == null || "".equals(format)) {
             format = DATE_TIME_PATTON_1;
         }
         SimpleDateFormat sdf = getSimpleDateFormat(format);
@@ -106,7 +90,7 @@ public class DateUtils {
             return null;
         }
 
-        if (format == null || format.equals("")) {
+        if (format == null || "".equals(format)) {
             format = DATE_TIME_PATTON_1;
         }
         SimpleDateFormat sdf = getSimpleDateFormat(format);
@@ -403,7 +387,7 @@ public class DateUtils {
             return null;
         }
 
-        if (format == null || format.equals("")) {
+        if (format == null || "".equals(format)) {
             format = DATE_TIME_PATTON_1;
         }
 
@@ -457,7 +441,7 @@ public class DateUtils {
             return null;
         }
 
-        if (format == null || format.equals("")) {
+        if (format == null || "".equals(format)) {
             format = DATE_TIME_PATTON_1;
         }
 
@@ -508,7 +492,7 @@ public class DateUtils {
             return null;
         }
 
-        if (format == null || format.equals("")) {
+        if (format == null || "".equals(format)) {
             format = DATE_TIME_PATTON_1;
         }
         Calendar calendar = Calendar.getInstance();
@@ -564,7 +548,7 @@ public class DateUtils {
             return null;
         }
 
-        if (format == null || format.equals("")) {
+        if (format == null || "".equals(format)) {
             format = DATE_TIME_PATTON_1;
         }
 
@@ -709,9 +693,20 @@ public class DateUtils {
         return (returnValue);
     }
 
-    // 打印两个时间差   -- 用于简单性能测试
+    /**
+     * @MethodName PrintTimeGap
+     * @Description
+     * @Author SongYapeng
+     * @Date 2020/1/19 14:06
+     * @param str
+     * @param start
+     * @param end
+     * @Since JDK 1.8
+     */
     public static String PrintTimeGap(String str, Date start, Date end) {
-        if (str == null || "".equals(str)) str = "";
+        if (str == null || "".equals(str)) {
+            str = "";
+        }
         long l = end.getTime() - start.getTime();
         long day = l / (24 * 60 * 60 * 1000);
         long hour = (l / (60 * 60 * 1000) - day * 24);
@@ -721,7 +716,15 @@ public class DateUtils {
         return str + "\r\n耗时为 : " + day + "天" + hour + "小时" + min + "分" + s + "秒" + n + "毫秒";
     }
 
-    // 计算时间差
+    /**
+     * @MethodName CalculTimeGap
+     * @Description
+     * @Author SongYapeng
+     * @Date 2020/1/19 14:06
+     * @param start
+     * @param end
+     * @Since JDK 1.8
+     */
     public static long CalculTimeGap(String start, String end) {
         SimpleDateFormat dfs = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         long between = 0;
